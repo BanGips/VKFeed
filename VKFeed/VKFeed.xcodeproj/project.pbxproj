@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C486C5425A2325400984056 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5325A2325400984056 /* AuthViewController.swift */; };
+		2C486C5625A2326F00984056 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C486C5525A2326F00984056 /* AuthViewController.storyboard */; };
+		2C486C5925A23E3D00984056 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5825A23E3D00984056 /* FeedViewController.swift */; };
+		2C486C5B25A23E5300984056 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C486C5A25A23E5300984056 /* FeedViewController.storyboard */; };
+		2C486C5D25A2423200984056 /* UIViewController + Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */; };
+		2C67F9D925A22F5C00276B01 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67F9D825A22F5C00276B01 /* AuthService.swift */; };
+		2CBCB85A25A2090700E5B306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBCB85925A2090700E5B306 /* AppDelegate.swift */; };
+		2CBCB86325A2090900E5B306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBCB86225A2090900E5B306 /* Assets.xcassets */; };
+		2CBCB86625A2090900E5B306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CBCB86425A2090900E5B306 /* LaunchScreen.storyboard */; };
+		31F54B086A35F0F24F57102A /* Pods_VKFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EF9A4C57379B2BA32708CD /* Pods_VKFeed.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C486C5325A2325400984056 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		2C486C5525A2326F00984056 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
+		2C486C5825A23E3D00984056 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		2C486C5A25A23E5300984056 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
+		2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Stroryboard.swift"; sourceTree = "<group>"; };
+		2C67F9D825A22F5C00276B01 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2CBCB85625A2090700E5B306 /* VKFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CBCB85925A2090700E5B306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CBCB86225A2090900E5B306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CBCB86525A2090900E5B306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CBCB86725A2090900E5B306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4058A27774FF0386E8787862 /* Pods-VKFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKFeed.debug.xcconfig"; path = "Target Support Files/Pods-VKFeed/Pods-VKFeed.debug.xcconfig"; sourceTree = "<group>"; };
+		59A51A8CBEDBE2C7AD6C5081 /* Pods-VKFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKFeed.release.xcconfig"; path = "Target Support Files/Pods-VKFeed/Pods-VKFeed.release.xcconfig"; sourceTree = "<group>"; };
+		84EF9A4C57379B2BA32708CD /* Pods_VKFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CBCB85325A2090700E5B306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F54B086A35F0F24F57102A /* Pods_VKFeed.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C486C5725A2328900984056 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2C486C5325A2325400984056 /* AuthViewController.swift */,
+				2C486C5525A2326F00984056 /* AuthViewController.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2C486C5E25A2423F00984056 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2C67F9DA25A22F6400276B01 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C67F9D825A22F5C00276B01 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2CBCB84D25A2090700E5B306 = {
+			isa = PBXGroup;
+			children = (
+				2CBCB85825A2090700E5B306 /* VKFeed */,
+				2CBCB85725A2090700E5B306 /* Products */,
+				D5631A2DEDE48CE5A2FAC74D /* Pods */,
+				6186D3E3804C71B7CF0FC369 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2CBCB85725A2090700E5B306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CBCB85625A2090700E5B306 /* VKFeed.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CBCB85825A2090700E5B306 /* VKFeed */ = {
+			isa = PBXGroup;
+			children = (
+				2CBCB85925A2090700E5B306 /* AppDelegate.swift */,
+				2C486C5825A23E3D00984056 /* FeedViewController.swift */,
+				2C486C5A25A23E5300984056 /* FeedViewController.storyboard */,
+				2C486C5725A2328900984056 /* Auth */,
+				2C67F9DA25A22F6400276B01 /* Services */,
+				2C486C5E25A2423F00984056 /* Helpers */,
+				2CBCB86225A2090900E5B306 /* Assets.xcassets */,
+				2CBCB86425A2090900E5B306 /* LaunchScreen.storyboard */,
+				2CBCB86725A2090900E5B306 /* Info.plist */,
+			);
+			path = VKFeed;
+			sourceTree = "<group>";
+		};
+		6186D3E3804C71B7CF0FC369 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84EF9A4C57379B2BA32708CD /* Pods_VKFeed.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5631A2DEDE48CE5A2FAC74D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4058A27774FF0386E8787862 /* Pods-VKFeed.debug.xcconfig */,
+				59A51A8CBEDBE2C7AD6C5081 /* Pods-VKFeed.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CBCB85525A2090700E5B306 /* VKFeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CBCB86A25A2090900E5B306 /* Build configuration list for PBXNativeTarget "VKFeed" */;
+			buildPhases = (
+				CDF3F8A240C7C392B6F980D2 /* [CP] Check Pods Manifest.lock */,
+				2CBCB85225A2090700E5B306 /* Sources */,
+				2CBCB85325A2090700E5B306 /* Frameworks */,
+				2CBCB85425A2090700E5B306 /* Resources */,
+				58FD151356C569D7254C50C2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VKFeed;
+			productName = VKFeed;
+			productReference = 2CBCB85625A2090700E5B306 /* VKFeed.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CBCB84E25A2090700E5B306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					2CBCB85525A2090700E5B306 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 2CBCB85125A2090700E5B306 /* Build configuration list for PBXProject "VKFeed" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CBCB84D25A2090700E5B306;
+			productRefGroup = 2CBCB85725A2090700E5B306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CBCB85525A2090700E5B306 /* VKFeed */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CBCB85425A2090700E5B306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CBCB86625A2090900E5B306 /* LaunchScreen.storyboard in Resources */,
+				2C486C5625A2326F00984056 /* AuthViewController.storyboard in Resources */,
+				2CBCB86325A2090900E5B306 /* Assets.xcassets in Resources */,
+				2C486C5B25A23E5300984056 /* FeedViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58FD151356C569D7254C50C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKFeed/Pods-VKFeed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKFeed/Pods-VKFeed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VKFeed/Pods-VKFeed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF3F8A240C7C392B6F980D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKFeed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CBCB85225A2090700E5B306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C486C5D25A2423200984056 /* UIViewController + Stroryboard.swift in Sources */,
+				2C67F9D925A22F5C00276B01 /* AuthService.swift in Sources */,
+				2C486C5425A2325400984056 /* AuthViewController.swift in Sources */,
+				2C486C5925A23E3D00984056 /* FeedViewController.swift in Sources */,
+				2CBCB85A25A2090700E5B306 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2CBCB86425A2090900E5B306 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CBCB86525A2090900E5B306 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CBCB86825A2090900E5B306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CBCB86925A2090900E5B306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CBCB86B25A2090900E5B306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4058A27774FF0386E8787862 /* Pods-VKFeed.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GTJ637UNQ;
+				INFOPLIST_FILE = VKFeed/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BanGips.VKFeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CBCB86C25A2090900E5B306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A51A8CBEDBE2C7AD6C5081 /* Pods-VKFeed.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GTJ637UNQ;
+				INFOPLIST_FILE = VKFeed/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BanGips.VKFeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CBCB85125A2090700E5B306 /* Build configuration list for PBXProject "VKFeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CBCB86825A2090900E5B306 /* Debug */,
+				2CBCB86925A2090900E5B306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CBCB86A25A2090900E5B306 /* Build configuration list for PBXNativeTarget "VKFeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CBCB86B25A2090900E5B306 /* Debug */,
+				2CBCB86C25A2090900E5B306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CBCB84E25A2090700E5B306 /* Project object */;
+}
