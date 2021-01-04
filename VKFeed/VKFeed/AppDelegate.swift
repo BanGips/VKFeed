@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthServiceDelegate {
         authService.delegate = self
         
         let authVC: AuthViewController = AuthViewController.loadFromStoryboard()
-        
         self.window?.rootViewController = authVC
         self.window?.makeKeyAndVisible()
         
@@ -37,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthServiceDelegate {
         return true
     }
     
-    // MARK: AuthServiceDelegate
+    // MARK: - AuthServiceDelegate
     
     func authServiceShouldShow(_ viewController: UIViewController) {
         print(#function)

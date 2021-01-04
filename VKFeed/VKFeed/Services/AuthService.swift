@@ -21,6 +21,11 @@ final class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     weak var delegate: AuthServiceDelegate?
     
+    var token: String? {
+        return VKSdk.accessToken()?.accessToken
+    }
+    
+    
     override init() {
         vkSdk = VKSdk.initialize(withAppId: appId)
         super.init()
@@ -48,7 +53,7 @@ final class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
         }
     }
     
-    // MARK: VKSdkDelegate
+    // MARK: - VKSdkDelegate
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         print(#function)
@@ -61,7 +66,7 @@ final class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
         print(#function)
     }
     
-    // MARK: VkSdkUIDelegate
+    // MARK: - VkSdkUIDelegate
     
     func vkSdkShouldPresent(_ controller: UIViewController!) {
         print(#function)

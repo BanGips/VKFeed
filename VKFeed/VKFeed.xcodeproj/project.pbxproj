@@ -12,6 +12,8 @@
 		2C486C5925A23E3D00984056 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5825A23E3D00984056 /* FeedViewController.swift */; };
 		2C486C5B25A23E5300984056 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C486C5A25A23E5300984056 /* FeedViewController.storyboard */; };
 		2C486C5D25A2423200984056 /* UIViewController + Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */; };
+		2C5423F025A3128200BEBD49 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5423EF25A3128200BEBD49 /* NetworkService.swift */; };
+		2C5423F225A3136E00BEBD49 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5423F125A3136E00BEBD49 /* API.swift */; };
 		2C67F9D925A22F5C00276B01 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67F9D825A22F5C00276B01 /* AuthService.swift */; };
 		2CBCB85A25A2090700E5B306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBCB85925A2090700E5B306 /* AppDelegate.swift */; };
 		2CBCB86325A2090900E5B306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBCB86225A2090900E5B306 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		2C486C5825A23E3D00984056 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		2C486C5A25A23E5300984056 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
 		2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Stroryboard.swift"; sourceTree = "<group>"; };
+		2C5423EF25A3128200BEBD49 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2C5423F125A3136E00BEBD49 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2C67F9D825A22F5C00276B01 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2CBCB85625A2090700E5B306 /* VKFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBCB85925A2090700E5B306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,10 +69,21 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		2C5423F325A313BF00BEBD49 /* FeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C486C5825A23E3D00984056 /* FeedViewController.swift */,
+				2C486C5A25A23E5300984056 /* FeedViewController.storyboard */,
+			);
+			path = FeedViewController;
+			sourceTree = "<group>";
+		};
 		2C67F9DA25A22F6400276B01 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				2C67F9D825A22F5C00276B01 /* AuthService.swift */,
+				2C5423EF25A3128200BEBD49 /* NetworkService.swift */,
+				2C5423F125A3136E00BEBD49 /* API.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -95,8 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2CBCB85925A2090700E5B306 /* AppDelegate.swift */,
-				2C486C5825A23E3D00984056 /* FeedViewController.swift */,
-				2C486C5A25A23E5300984056 /* FeedViewController.storyboard */,
+				2C5423F325A313BF00BEBD49 /* FeedViewController */,
 				2C486C5725A2328900984056 /* Auth */,
 				2C67F9DA25A22F6400276B01 /* Services */,
 				2C486C5E25A2423F00984056 /* Helpers */,
@@ -243,7 +257,9 @@
 				2C67F9D925A22F5C00276B01 /* AuthService.swift in Sources */,
 				2C486C5425A2325400984056 /* AuthViewController.swift in Sources */,
 				2C486C5925A23E3D00984056 /* FeedViewController.swift in Sources */,
+				2C5423F025A3128200BEBD49 /* NetworkService.swift in Sources */,
 				2CBCB85A25A2090700E5B306 /* AppDelegate.swift in Sources */,
+				2C5423F225A3136E00BEBD49 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

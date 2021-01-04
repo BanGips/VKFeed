@@ -16,9 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMb-KW-Unp">
-                                <rect key="frame" x="165.5" y="427.5" width="83" height="41"/>
+                                <rect key="frame" x="154" y="427.5" width="106" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Sing VK"/>
+                                <state key="normal" title="Sing in VK"/>
                                 <connections>
                                     <action selector="singInTouch" destination="pPW-mR-9zz" eventType="touchUpInside" id="pWH-yj-4Fu"/>
                                 </connections>
