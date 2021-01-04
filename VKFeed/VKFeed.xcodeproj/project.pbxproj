@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2C486C5425A2325400984056 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5325A2325400984056 /* AuthViewController.swift */; };
 		2C486C5625A2326F00984056 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C486C5525A2326F00984056 /* AuthViewController.storyboard */; };
-		2C486C5925A23E3D00984056 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5825A23E3D00984056 /* FeedViewController.swift */; };
-		2C486C5B25A23E5300984056 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C486C5A25A23E5300984056 /* FeedViewController.storyboard */; };
 		2C486C5D25A2423200984056 /* UIViewController + Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */; };
 		2C5423F025A3128200BEBD49 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5423EF25A3128200BEBD49 /* NetworkService.swift */; };
 		2C5423F225A3136E00BEBD49 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5423F125A3136E00BEBD49 /* API.swift */; };
@@ -35,8 +33,6 @@
 /* Begin PBXFileReference section */
 		2C486C5325A2325400984056 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		2C486C5525A2326F00984056 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
-		2C486C5825A23E3D00984056 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		2C486C5A25A23E5300984056 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
 		2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Stroryboard.swift"; sourceTree = "<group>"; };
 		2C5423EF25A3128200BEBD49 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2C5423F125A3136E00BEBD49 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -89,15 +85,6 @@
 				2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		2C5423F325A313BF00BEBD49 /* FeedViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2C486C5825A23E3D00984056 /* FeedViewController.swift */,
-				2C486C5A25A23E5300984056 /* FeedViewController.storyboard */,
-			);
-			path = FeedViewController;
 			sourceTree = "<group>";
 		};
 		2C5423F625A3220100BEBD49 /* Models */ = {
@@ -167,7 +154,6 @@
 			children = (
 				2CBCB85925A2090700E5B306 /* AppDelegate.swift */,
 				2C5423FB25A34A7C00BEBD49 /* NewsFeed */,
-				2C5423F325A313BF00BEBD49 /* FeedViewController */,
 				2C486C5725A2328900984056 /* Auth */,
 				2C67F9DA25A22F6400276B01 /* Services */,
 				2C486C5E25A2423F00984056 /* Helpers */,
@@ -259,7 +245,6 @@
 				2C486C5625A2326F00984056 /* AuthViewController.storyboard in Resources */,
 				2C54240B25A34F9000BEBD49 /* NewsfeedViewController.storyboard in Resources */,
 				2CBCB86325A2090900E5B306 /* Assets.xcassets in Resources */,
-				2C486C5B25A23E5300984056 /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +304,6 @@
 				2C54240325A34ADC00BEBD49 /* NewsfeedPresenter.swift in Sources */,
 				2C486C5425A2325400984056 /* AuthViewController.swift in Sources */,
 				2C54240525A34ADC00BEBD49 /* NewsfeedRouter.swift in Sources */,
-				2C486C5925A23E3D00984056 /* FeedViewController.swift in Sources */,
 				2C5423F025A3128200BEBD49 /* NetworkService.swift in Sources */,
 				2C54240625A34ADC00BEBD49 /* NewsfeedModels.swift in Sources */,
 				2C54241125A35BB900BEBD49 /* NewsfeedTableViewCell.swift in Sources */,
