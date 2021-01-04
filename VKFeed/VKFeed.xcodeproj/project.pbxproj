@@ -14,6 +14,8 @@
 		2C486C5D25A2423200984056 /* UIViewController + Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */; };
 		2C5423F025A3128200BEBD49 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5423EF25A3128200BEBD49 /* NetworkService.swift */; };
 		2C5423F225A3136E00BEBD49 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5423F125A3136E00BEBD49 /* API.swift */; };
+		2C5423F825A3221D00BEBD49 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5423F725A3221D00BEBD49 /* FeedResponse.swift */; };
+		2C5423FA25A32A1000BEBD49 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5423F925A32A1000BEBD49 /* NetworkDataFetcher.swift */; };
 		2C67F9D925A22F5C00276B01 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67F9D825A22F5C00276B01 /* AuthService.swift */; };
 		2CBCB85A25A2090700E5B306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBCB85925A2090700E5B306 /* AppDelegate.swift */; };
 		2CBCB86325A2090900E5B306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBCB86225A2090900E5B306 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Stroryboard.swift"; sourceTree = "<group>"; };
 		2C5423EF25A3128200BEBD49 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2C5423F125A3136E00BEBD49 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2C5423F725A3221D00BEBD49 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
+		2C5423F925A32A1000BEBD49 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		2C67F9D825A22F5C00276B01 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2CBCB85625A2090700E5B306 /* VKFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBCB85925A2090700E5B306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,12 +82,22 @@
 			path = FeedViewController;
 			sourceTree = "<group>";
 		};
+		2C5423F625A3220100BEBD49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C5423F725A3221D00BEBD49 /* FeedResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2C67F9DA25A22F6400276B01 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2C5423F625A3220100BEBD49 /* Models */,
 				2C67F9D825A22F5C00276B01 /* AuthService.swift */,
 				2C5423EF25A3128200BEBD49 /* NetworkService.swift */,
 				2C5423F125A3136E00BEBD49 /* API.swift */,
+				2C5423F925A32A1000BEBD49 /* NetworkDataFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -253,11 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5423F825A3221D00BEBD49 /* FeedResponse.swift in Sources */,
 				2C486C5D25A2423200984056 /* UIViewController + Stroryboard.swift in Sources */,
 				2C67F9D925A22F5C00276B01 /* AuthService.swift in Sources */,
 				2C486C5425A2325400984056 /* AuthViewController.swift in Sources */,
 				2C486C5925A23E3D00984056 /* FeedViewController.swift in Sources */,
 				2C5423F025A3128200BEBD49 /* NetworkService.swift in Sources */,
+				2C5423FA25A32A1000BEBD49 /* NetworkDataFetcher.swift in Sources */,
 				2CBCB85A25A2090700E5B306 /* AppDelegate.swift in Sources */,
 				2C5423F225A3136E00BEBD49 /* API.swift in Sources */,
 			);
