@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C39FE1825A4656F00B004FA /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39FE1725A4656F00B004FA /* WebImageView.swift */; };
 		2C486C5425A2325400984056 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5325A2325400984056 /* AuthViewController.swift */; };
 		2C486C5625A2326F00984056 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C486C5525A2326F00984056 /* AuthViewController.storyboard */; };
 		2C486C5D25A2423200984056 /* UIViewController + Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C39FE1725A4656F00B004FA /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		2C486C5325A2325400984056 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		2C486C5525A2326F00984056 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
 		2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Stroryboard.swift"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				2C486C5C25A2423200984056 /* UIViewController + Stroryboard.swift */,
+				2C39FE1725A4656F00B004FA /* WebImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				2C54240525A34ADC00BEBD49 /* NewsfeedRouter.swift in Sources */,
 				2C5423F025A3128200BEBD49 /* NetworkService.swift in Sources */,
 				2C54240625A34ADC00BEBD49 /* NewsfeedModels.swift in Sources */,
+				2C39FE1825A4656F00B004FA /* WebImageView.swift in Sources */,
 				2C54241125A35BB900BEBD49 /* NewsfeedTableViewCell.swift in Sources */,
 				2C5423FA25A32A1000BEBD49 /* NetworkDataFetcher.swift in Sources */,
 				2C54240425A34ADC00BEBD49 /* NewsfeedWorker.swift in Sources */,
