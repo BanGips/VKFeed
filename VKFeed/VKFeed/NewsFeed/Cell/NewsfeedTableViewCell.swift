@@ -36,12 +36,21 @@ class NewsfeedTableViewCell: UITableViewCell {
     @IBOutlet weak var sharesLabel: UILabel!
     @IBOutlet weak var viewsLabel: UILabel!
     @IBOutlet weak var postImageView: WebImageView!
+    @IBOutlet weak var cardView: UIView!
     
     static let reuseId = "NewsfeedTableViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        iconImageView.layer.cornerRadius = iconImageView.frame.width / 2
+        iconImageView.clipsToBounds = true
+        
+        cardView.layer.cornerRadius = 10
+        cardView.clipsToBounds = true
+        
+        backgroundColor = .clear
+        selectionStyle = .none
     }
     
     func set(viewModel: FeedCellViewModel) {
@@ -54,7 +63,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         sharesLabel.text = viewModel.shares
         viewsLabel.text = viewModel.views
         
-        if let  photoAttachment = viewModel.photoAttachment {
+        if let photoAttachment = viewModel.photoAttachment {
             postImageView.set(imageURL: photoAttachment.photoUrlString)
             postImageView.isHidden = false
         } else {

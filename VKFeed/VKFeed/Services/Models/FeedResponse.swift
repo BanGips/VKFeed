@@ -36,7 +36,7 @@ struct Photo: Decodable {
     let sizes: [PhotoSize]
     
     var hight: Int {
-        return getPropperSize().hight
+        return getPropperSize().height
     }
     
     var width: Int {
@@ -53,7 +53,7 @@ struct Photo: Decodable {
         } else if let fallBackSize = sizes.last {
             return fallBackSize
         } else {
-            return PhotoSize(type: "wrong image", url: "wrong image", width: 0, hight: 0)
+            return PhotoSize(type: "wrong image", url: "wrong image", width: 0, height: 0)
         }
     }
 }
@@ -62,7 +62,7 @@ struct PhotoSize: Decodable {
     let type: String
     let url: String
     let width: Int
-    let hight: Int
+    let height: Int
 }
 
 struct CountableItem: Decodable {

@@ -25,6 +25,11 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        view.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        
         tableView.register(UINib(nibName: "NewsfeedTableViewCell", bundle: nil), forCellReuseIdentifier: NewsfeedTableViewCell.reuseId)
 
     }
