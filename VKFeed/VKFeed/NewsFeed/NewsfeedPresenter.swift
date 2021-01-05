@@ -13,7 +13,11 @@ protocol NewsfeedPresentationLogic {
 }
 
 class NewsfeedPresenter: NewsfeedPresentationLogic {
+    
     weak var viewController: NewsfeedDisplayLogic?
+
+    var cellLayoutCalculator: FeedCellLayoutCalculatorProtocol = FeedCellLayoutCalculator()
+    
     lazy var dateFormatter: DateFormatter = {
         let dt = DateFormatter()
         dt.locale = Locale(identifier: "ru_RU")
@@ -26,7 +30,6 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
         switch response {
         case .presentNewsfeed(let feed):
             
-
             let cells = feed.items.map { cellViewModel(from: $0, profile: feed.profiles, groups: feed.groups) }
             
             let feedViewModel = FeedViewModel(cells: cells)
@@ -41,6 +44,7 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
         let dateTitle = dateFormatter.string(from: date)
         
         let photoAttachments = self.photoAtachment(feedItem: feedItem)
+        let sizes = cellLayoutCalculator.sizes(post: feedItem.text, photoAttachment: photoAttachments)
         
         return FeedViewModel.Cell(iconUrlString: profile.photo,
                                   name: profile.name,
@@ -50,7 +54,9 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
                                   comments: String(feedItem.comments?.count ?? 0),
                                   shares: String(feedItem.reposts?.count ?? 0),
                                   views: String(feedItem.views?.count ?? 0),
-                                  photoAttachment: photoAttachments)
+                                  photoAttachment: photoAttachments,
+                                  sizes: sizes)
+                        
     }
     
     private func profile(for sourseId: Int, profile: [Profile], groups: [Group]) -> ProfileRepresentable {
@@ -68,7 +74,7 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
         
         return FeedViewModel.FeedCellPhotoAttachement(photoUrlString: firstPhoto.srcBIG,
                                                       width: firstPhoto.width,
-                                                      higth: firstPhoto.hight)
+                                                      heigth: firstPhoto.hight)
     }
     
 }
