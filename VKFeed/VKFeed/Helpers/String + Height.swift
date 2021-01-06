@@ -21,3 +21,9 @@ extension String {
     }
     
 }
+
+extension UIView {
+    func translatesAutoresizingMaskIntoConstraintsFalse() {
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+}
