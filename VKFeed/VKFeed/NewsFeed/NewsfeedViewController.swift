@@ -82,6 +82,9 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
 
         let cellViewModel = feedViewModel.cells[indexPath.row]
         cell.set(viewModel: cellViewModel)
+        cell.revealPost = { cell in
+            self.interactor?.makeRequest(request: .revealPostId(postId: cellViewModel.postId))
+        }
        
         return cell
     }
@@ -91,5 +94,10 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cellViewModel = feedViewModel.cells[indexPath.row]
         return cellViewModel.sizes.totalHeight
         
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellViewModel = feedViewModel.cells[indexPath.row]
+        return cellViewModel.sizes.totalHeight
     }
 }

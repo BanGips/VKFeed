@@ -9,9 +9,13 @@ import Foundation
 import UIKit
 import SnapKit
 
+typealias RevealPostCompletion = (NewsfeedCodeCell) -> Void
+
 final class NewsfeedCodeCell: UITableViewCell {
     
     static let reuseId = "NewsfeedCodeCell"
+    
+    var revealPost: RevealPostCompletion?
     
     // layer 1
     let cardView: UIView = {
@@ -30,9 +34,20 @@ final class NewsfeedCodeCell: UITableViewCell {
     
     let postLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         label.font = Constants.postLabelFont
         label.textColor = .black
         return label
+    }()
+    
+    let moreTextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        button.setTitleColor(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1), for: .normal)
+        button.contentHorizontalAlignment = .left
+        button.contentVerticalAlignment = .center
+        button.setTitle("Показать полностью", for: .normal)
+        return button
     }()
     
     let postImageView: WebImageView = {
@@ -162,6 +177,10 @@ final class NewsfeedCodeCell: UITableViewCell {
            return label
        }()
     
+    override func prepareForReuse() {
+           iconImageView.set(imageURL: nil)
+           postImageView.set(imageURL: nil)
+       }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -172,7 +191,9 @@ final class NewsfeedCodeCell: UITableViewCell {
         overlayThirdLayerOnBottomView()
         overlayFourthLayerOnBottomView()
         
-        iconImageView.layer.cornerRadius = iconImageView.frame.width / 2
+        moreTextButton.addTarget(self, action: #selector(moreTextButtonTouch), for: .touchUpInside)
+        
+        iconImageView.layer.cornerRadius = Constants.topViewHeight / 2
         iconImageView.clipsToBounds = true
         
         cardView.layer.cornerRadius = 10
@@ -180,6 +201,10 @@ final class NewsfeedCodeCell: UITableViewCell {
         
         backgroundColor = .clear
         selectionStyle = .none
+    }
+    
+    @objc func moreTextButtonTouch() {
+        revealPost?(self)
     }
     
     func set(viewModel: FeedCellViewModel) {
@@ -195,6 +220,7 @@ final class NewsfeedCodeCell: UITableViewCell {
         postImageView.frame = viewModel.sizes.ataachmentFrame
         postLabel.frame = viewModel.sizes.postLabelFrame
         bottomView.frame = viewModel.sizes.bottomViewFrame
+        moreTextButton.frame = viewModel.sizes.moreTextButtonFrame
         
         if let photoAttachment = viewModel.photoAttachment {
             postImageView.set(imageURL: photoAttachment.photoUrlString)
@@ -214,6 +240,7 @@ final class NewsfeedCodeCell: UITableViewCell {
     private func overlaySecondLayer() {
         cardView.addSubview(topView)
         cardView.addSubview(postLabel)
+        cardView.addSubview(moreTextButton)
         cardView.addSubview(postImageView)
         cardView.addSubview(bottomView)
         
