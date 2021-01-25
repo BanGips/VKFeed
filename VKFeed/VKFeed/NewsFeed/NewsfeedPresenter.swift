@@ -29,12 +29,14 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
         
         switch response {
         case .presentNewsfeed(let feed, let revealdedPostId):
-            print(revealdedPostId)
             
             let cells = feed.items.map { cellViewModel(from: $0, profile: feed.profiles, groups: feed.groups, revealdedPostId: revealdedPostId) }
             
             let feedViewModel = FeedViewModel(cells: cells)
             viewController?.displayData(viewModel: .displayNewsfeed(feedViewModel: feedViewModel))
+        case .presentUserInfo(user: let user):
+            let userModel = UserViewModel(photouserString: user?.photo100)
+            viewController?.displayData(viewModel: .displayuser(userViewModel: userModel))
         }
         
     }
@@ -75,7 +77,6 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
     private func photoAtachment(feedItem: FeedItem) -> FeedViewModel.FeedCellPhotoAttachement? {
         guard let photos = feedItem.attachments?.compactMap({ $0.photo }),
             let firstPhoto = photos.first else {return nil}
-        
         return FeedViewModel.FeedCellPhotoAttachement(photoUrlString: firstPhoto.srcBIG,
                                                       width: firstPhoto.width,
                                                       heigth: firstPhoto.hight)

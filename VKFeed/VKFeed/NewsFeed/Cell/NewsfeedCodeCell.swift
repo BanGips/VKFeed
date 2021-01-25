@@ -208,6 +208,7 @@ final class NewsfeedCodeCell: UITableViewCell {
     }
     
     func set(viewModel: FeedCellViewModel) {
+        print(viewModel.iconUrlString)
         iconImageView.set(imageURL: viewModel.iconUrlString)
         nameLabel.text = viewModel.name
         dateLabel.text = viewModel.date

@@ -19,21 +19,16 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     var router: (NSObjectProtocol & NewsfeedRoutingLogic)?
     
     private var feedViewModel = FeedViewModel(cells: [ ])
+    private var titleView = TitleView()
+    
+    private var refreshControl: UIRefreshControl = {
+       let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        return refreshControl
+    }()
     
     // MARK: Setup
     
-    private func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = .clear
-        view.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        
-        tableView.register(UINib(nibName: "NewsfeedTableViewCell", bundle: nil), forCellReuseIdentifier: NewsfeedTableViewCell.reuseId)
-        tableView.register(NewsfeedCodeCell.self, forCellReuseIdentifier: NewsfeedCodeCell.reuseId)
-
-    }
     
     private func setup() {
         let viewController        = self
@@ -47,6 +42,26 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
         router.viewController     = viewController
     }
     
+    private func setupTableView() {
+        let topInset: CGFloat = 8
+        tableView.contentInset.top = topInset
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        view.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        
+        tableView.register(UINib(nibName: "NewsfeedTableViewCell", bundle: nil), forCellReuseIdentifier: NewsfeedTableViewCell.reuseId)
+        tableView.register(NewsfeedCodeCell.self, forCellReuseIdentifier: NewsfeedCodeCell.reuseId)
+        tableView.addSubview(refreshControl)
+        
+    }
+    
+    @objc private func refresh() {
+        interactor?.makeRequest(request: .getNewsFeed)
+    }
+    
     // MARK: Routing
     
     
@@ -57,8 +72,10 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
         super.viewDidLoad()
         
         setup()
+        setupTopBar()
         setupTableView()
         interactor?.makeRequest(request: .getNewsFeed)
+        interactor?.makeRequest(request: .getUser)
     }
     
     func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData) {
@@ -67,7 +84,23 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
         case .displayNewsfeed(let feedViewModel):
             self.feedViewModel = feedViewModel
             tableView.reloadData()
+            refreshControl.endRefreshing()
+        case .displayuser(userViewModel: let userViewModel):
+            titleView.set(userViewModel:  userViewModel)
+             
         }
+    }
+    
+    private func setupTopBar() {
+        
+        self.navigationController?.hidesBarsOnSwipe = true
+        self.navigationItem.titleView = titleView
+        
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        guard let topBarFrame = window?.windowScene?.statusBarManager?.statusBarFrame else { return }
+        let topbar = UIView(frame: topBarFrame)
+        topbar.backgroundColor = .white
+        view.addSubview(topbar)
     }
     
 }
