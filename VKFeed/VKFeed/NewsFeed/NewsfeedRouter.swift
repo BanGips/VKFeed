@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NewsfeedRoutingLogic {
- func test()  
+
 }
 
 class NewsfeedRouter: NSObject, NewsfeedRoutingLogic {
